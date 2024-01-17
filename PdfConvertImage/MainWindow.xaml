@@ -1,0 +1,51 @@
+﻿<Window x:Class="PdfConvertImage.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PdfConvertImage"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0">
+            <Label Content="设置"/>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="图片宽：" VerticalAlignment="Center"/>
+                <TextBox Width="100" Height="30" Text="400" VerticalContentAlignment="Center" x:Name="widthText"/>
+                <Label Content="图片高：" VerticalAlignment="Center"/>
+                <TextBox Width="100" Height="30" Text="600" VerticalContentAlignment="Center"  x:Name="heightText"/>
+                <!--<Label Content="旋转角度：" VerticalAlignment="Center"/>
+                <TextBox Width="100" Height="30" Text="0" VerticalContentAlignment="Center"  x:Name="rotateText"/>-->
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="0 10 0 0 ">
+                <Label Content="选择生成文档模式：" VerticalAlignment="Center"/>
+                <RadioButton Content="每个PDF生成对应文档" VerticalAlignment="Center"  IsChecked="True" x:Name="moreRb"/>
+                <RadioButton Content="单一文档" VerticalAlignment="Center" Margin="10 0 0 0 " x:Name="oddRb"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="0 10 0 0 ">
+                <Label Content="选择PDF文档文件夹：" VerticalAlignment="Center"/>
+                <Button Width="100" Height="30" Content="选择" Click="SelectPDF_Button_Click"/>
+            </StackPanel>
+            <StackPanel>
+                <Label  VerticalAlignment="Center" x:Name="pdfSouceLb"/>
+            </StackPanel>
+            
+            <StackPanel Orientation="Horizontal" Margin="0 10 0 0 ">
+                <Label Content="选择生成文档位置：" VerticalAlignment="Center"/>
+                <Button Width="100" Height="30" Content="选择" Click="OutPutWord_Button_Click"/>
+            </StackPanel>
+            <StackPanel>
+                <Label  VerticalAlignment="Center" x:Name="wordOutPutLb"/>
+            </StackPanel>
+        </StackPanel>
+
+        <StackPanel Grid.Row="1">
+            <Label Content="操作"/>
+            <Button x:Name="ConvertImage" Content="开始转换" Width="100" Height="30" Click="ConvertImage_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>
