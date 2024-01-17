@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "cPY29hJzYJLS+8xOe0bplv1E04tAT7xPLZJ/IiuJoLH6okfxdpjH3KZTHMNlml/cf3DIJ98CaNXIXIC0nz/HCg==",
+  "success": true,
+  "projectFilePath": "D:\\Desktop\\PdfToImage\\PdfToImage\\PdfToImage.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\wu\\.nuget\\packages\\pdfiumviewer\\2.12.0\\pdfiumviewer.2.12.0.nupkg.sha512"
+  ],
+  "logs": []
+}
